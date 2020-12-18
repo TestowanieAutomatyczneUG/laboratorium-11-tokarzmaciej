@@ -24,7 +24,7 @@ class testFile(TestCase):
     def test_delete_file_exception(self, mock_os):
         mock_os.path = Mock()
         mock_os.path.exists.return_value = False
-        self.assertRaises(Exception, self.temp.delete_file, "file.txt")
+        self.assertRaisesRegex(Exception,"This file not exist", self.temp.delete_file, "file.txt")
 
     @mock.patch('src.sample.file.os')
     def test_delete_file(self, mock_os):
