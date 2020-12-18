@@ -17,7 +17,7 @@ class testFile(TestCase):
         editFile = mock_open(read_data="test_open_file")
 
         with patch('builtins.open', editFile):
-            self.temp.edit_file("file.txt", "test_open_file")
+            self.temp.edit_file("file.txt", "test_write_file")
         editFile.assert_called_once_with("file.txt", "w")
 
     @mock.patch('src.sample.file.os')
