@@ -4,7 +4,7 @@ from unittest import TestCase, main, mock
 from src.sample.file import File
 
 
-class testNotesService(TestCase):
+class testFile(TestCase):
     def setUp(self):
         self.temp = File()
 
